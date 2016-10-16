@@ -66,15 +66,22 @@
     <Compile Include="SpellBooks\Specs\Blood\Methods\BloodBoilMethod.cs" />
     <Compile Include="SpellBooks\Specs\Blood\Spells\BloodSpells.cs" />
     <Compile Include="SpellBooks\Specs\Blood\Talents\BloodTalents.cs" />
+    <Compile Include="SpellBooks\Specs\Outlaw\Spells\OutlawSpells.cs" />
+    <Compile Include="SpellBooks\Specs\Outlaw\Talents\OutlawTalents.cs" />
     <Compile Include="SpellBooks\Specs\TinyRaiderSpells.cs" />
     <Compile Include="SpellBooks\Specs\TinyRaiderTalents.cs" />
+    <Compile Include="SpellBooks\Specs\Unholy\Spells\UnholySpells.cs" />
+    <Compile Include="SpellBooks\Specs\Unholy\Talents\UnholyTalents.cs" />
     <Compile Include="SpellBooks\Spell.cs" />
     <Compile Include="SpellBooks\Talents\ITalent.cs" />
     <Compile Include="SpellBooks\Talents\Talent.cs" />
     <Compile Include="TinyRaider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="SpellBooks\Specs\Outlaw\Methods\" />
+    <Folder Include="SpellBooks\Specs\Unholy\Methods\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

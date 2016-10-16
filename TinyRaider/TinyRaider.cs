@@ -77,6 +77,10 @@ namespace TinyRaider
 			{
 				case WoWSpec.DeathKnightBlood:
 					return new Blood();
+				case WoWSpec.DeathKnightUnholy:
+					return new Unholy();
+				case WoWSpec.RogueOutlaw:
+					return new Outlaw();
 				default:
 					return new Blood();
 			}

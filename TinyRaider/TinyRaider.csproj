@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TinyRaider</RootNamespace>
     <AssemblyName>TinyRaider</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,11 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GreyMagic">
+      <HintPath>..\..\..\GreyMagic.dll</HintPath>
+    </Reference>
     <Reference Include="Honorbuddy">
       <HintPath>..\..\..\Honorbuddy.exe</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,9 +49,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\Globals.cs" />
+    <Compile Include="Helpers\Logger.cs" />
+    <Compile Include="Helpers\Unit.cs" />
+    <Compile Include="Managers\Talent.cs" />
+    <Compile Include="Rotations\IRotation.cs" />
+    <Compile Include="Rotations\Rotation.cs" />
+    <Compile Include="Rotations\Specs\Blood.cs" />
+    <Compile Include="Rotations\Specs\Outlaw.cs" />
+    <Compile Include="Rotations\Specs\Unholy.cs" />
+    <Compile Include="SpellBooks\ISpellBook.cs" />
+    <Compile Include="SpellBooks\ISpellBookExpanded.cs" />
+    <Compile Include="SpellBooks\Specs\Blood\Methods\MarrowrendMethod.cs" />
+    <Compile Include="SpellBooks\Specs\Blood\Methods\HeartStrikeMethod.cs" />
+    <Compile Include="SpellBooks\Specs\Blood\Methods\DeathAndDecayMethod.cs" />
+    <Compile Include="SpellBooks\Specs\Blood\Methods\BloodBoilMethod.cs" />
+    <Compile Include="SpellBooks\Specs\Blood\Spells\BloodSpells.cs" />
+    <Compile Include="SpellBooks\Specs\Blood\Talents\BloodTalents.cs" />
+    <Compile Include="SpellBooks\Specs\TinyRaiderSpells.cs" />
+    <Compile Include="SpellBooks\Specs\TinyRaiderTalents.cs" />
+    <Compile Include="SpellBooks\Spell.cs" />
+    <Compile Include="SpellBooks\Talents\ITalent.cs" />
+    <Compile Include="SpellBooks\Talents\Talent.cs" />
     <Compile Include="TinyRaider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
